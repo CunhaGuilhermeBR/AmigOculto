@@ -1,0 +1,38 @@
+{{define "Draw"}} {{template "_head"}}
+
+<body>
+
+    <div class="parent">
+        <div class="div3">
+            <div class="container mt-4">
+                <h3 style="color: #fff;">Sortear Amigo Oculto</h3>
+                <div class="form-group">
+
+                    <form method="POST" action="pick">
+                        <label for="partipants">ID do amigo oculto:</label>
+                        <br>
+                        <input type="text" name="idOccultFriend" class="form-control" required>
+                        <br>
+                        <small style="color: #fff;">Digite o ID do amigo oculto que você deseja participar para sortear quem você irá sortear!</small>
+                        <br>
+                        <br>
+                        <button type="submit" value="salvar" class="buttonChristmas">Participar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    function onParticipate() {
+        fetch('http://localhost:3000/pick')
+        let resposta = confirm("Você tirou " + person + ", essa pessoa é você?")
+        if (resposta) {
+            window.location = "/delete?id=" + id
+        }
+    }
+</script>
+
+</html>
+{{end}}

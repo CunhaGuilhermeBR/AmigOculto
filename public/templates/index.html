@@ -1,0 +1,42 @@
+{{define "Index"}} {{template "_head"}}
+
+
+<body>
+    <div class="container">
+        <div class="parent">
+            <div class="div1">
+
+                <div class="container mt-4" style="text-align: center;">
+                    <form method="POST" action="create">
+                        <button type="submit" value="salvar" class="buttonChristmas" style="width: 250px; height: 80px;">Criar amigo oculto</button>
+                    </form>
+                </div>
+
+                <div class="container mt-4" style="text-align: center;">
+                    <form method="GET" action="draw">
+                        <button class="buttonChristmas" style="width: 250px; height: 80px;">Participar</button>
+                    </form>
+
+                </div>
+                <div class="container mt-4" style="text-align: center;">
+                    <button class="buttonChristmas" style="width: 250px; height: 80px;">Acompanhar</button>
+                </div>
+                <form>
+                    <div class="container mt-4" style="text-align: center;">
+                        <button class="buttonChristmas" style="width: 250px; height: 80px;">Como funciona</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="div2">
+                <img src="/public/images/imagem.png" style="text-align: center;">
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+{{end}}
